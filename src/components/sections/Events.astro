@@ -84,6 +84,7 @@ import Btn from "../assets/Btn.astro";
       display: flex;
       flex-direction: column;
       max-width: 100%;
+      align-items: center;
     }
     .events_pictures .mobil_hide {
       display: none;
@@ -93,6 +94,13 @@ import Btn from "../assets/Btn.astro";
       width: 300px;
       margin-bottom: var(--gap-32);
     }
+    .events_flex {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-32);
+      align-items: flex-start;
+      margin-top: var(--gap-32);
+    }
 
     @media (min-width: 900px) {
       .info {
@@ -101,10 +109,10 @@ import Btn from "../assets/Btn.astro";
       }
 
       .events_flex {
-        display: flex;
         flex-direction: row;
         gap: var(--gap-96);
         align-items: flex-start;
+        margin-top: none;
       }
       .desktop_flex {
         display: flex;
