@@ -26,6 +26,11 @@ import Btn from "../assets/Btn.astro";
       </div>
     </div>
   </div>
+  <div class="events_pictures">
+    <img loading="lazy" src="/portraits/event1.webp" alt="Event picture" />
+    <img class="mobil_hide" loading="lazy" src="/portraits/event2.webp" alt="Event picture" />
+    <img class="mobil_hide" loading="lazy" src="/portraits/event3.webp" alt="Event picture" />
+  </div>
   <!--  <div class="events_img">
       <img loading="lazy" src="/event/contra.webp" alt="Contra shop" />
     </div> -->
@@ -73,18 +78,28 @@ import Btn from "../assets/Btn.astro";
     }
     form {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
     }
+
+    .events_pictures {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .events_pictures .mobil_hide {
+      display: none;
+    }
+    .events_pictures img {
+      height: auto;
+      width: 300px;
+      margin-bottom: var(--gap-32);
+    }
+
     @media (min-width: 900px) {
       .info {
         max-width: 760px;
         gap: var(--gap-96);
       }
-      .events_img {
-        width: 520px;
-        height: auto;
-      }
+
       .events_flex {
         display: flex;
         flex-direction: row;
@@ -95,6 +110,16 @@ import Btn from "../assets/Btn.astro";
         display: flex;
         flex-direction: column;
         gap: var(--gap-48);
+      }
+      .events_pictures {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: var(--gap-16);
+      }
+
+      .events_pictures .mobil_hide {
+        display: block;
       }
     }
   </style>
