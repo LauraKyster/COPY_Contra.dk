@@ -8,127 +8,166 @@ import Btn from "../assets/Btn.astro";
     <h2 class="h4">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h2>
   </div>
   <div class="desktop_flex">
-    <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
-    <p>We'd love to see you! Sign up to get friendly updates about upcoming events and gatherings! And don't worry - we won't spam you :)</p>
+    <p>
+      At Contra, we host a mix of events that bring our community together. From
+      cute little markets, to heartfelt Charity Events and cozy Gatherings that
+      spark connection. Everybody is welcome at any time in our home, Contra
+      House.
+    </p>
+    <p>
+      We'd love to see you! Sign up to get friendly updates about upcoming
+      events and gatherings! And don't worry - we won't spam you :)
+    </p>
     <div class="events_flex">
       <div class="newsletter_container">
         <p class="bold text_blue">Sign up for our lovely events!</p>
 
-        <form action="tak.html" name="newsletter" method="post" netlify netlify-honeypot="bot-field">
-          <input type="email" id="email" name="email" placeholder="Write your email..." required />
+        <form
+          action="tak.html"
+          name="newsletter"
+          method="post"
+          netlify
+          netlify-honeypot="bot-field"
+        >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Write your email..."
+            required
+          />
 
           <input type="submit" value="Send" />
         </form>
       </div>
       <div class="btn_container">
-        <p class="bold text_blue">We will post about upcoming events on Instagram</p>
-        <Btn href="https://www.instagram.com/contra_tattoo_studio/" variant="primary" target="_blank">go to instagram</Btn>
+        <p class="bold text_blue">
+          We will post about upcoming events on Instagram
+        </p>
+        <Btn
+          href="https://www.instagram.com/contra_tattoo_studio/"
+          variant="primary"
+          target="_blank">go to instagram</Btn
+        >
       </div>
     </div>
   </div>
   <div class="events_pictures">
     <img loading="lazy" src="/portraits/event1.webp" alt="Event picture" />
-    <img class="mobil_hide" loading="lazy" src="/portraits/event2.webp" alt="Event picture" />
-    <img class="mobil_hide" loading="lazy" src="/portraits/event3.webp" alt="Event picture" />
+    <img
+      class="mobil_hide"
+      loading="lazy"
+      src="/portraits/event2.webp"
+      alt="Event picture"
+    />
+    <img
+      class="mobil_hide"
+      loading="lazy"
+      src="/portraits/event3.webp"
+      alt="Event picture"
+    />
   </div>
   <!--  <div class="events_img">
       <img loading="lazy" src="/event/contra.webp" alt="Contra shop" />
     </div> -->
-  <style>
-    .text_flex {
+</section>
+
+
+<style>
+  .text_flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-48);
+    margin-bottom: var(--gap-48);
+  }
+  .btn_container,
+  .newsletter_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+    align-items: start;
+  }
+
+  input[type="email"] {
+    width: 100%;
+    padding: var(--gap-16);
+
+    display: inline-block;
+    border: 1px solid var(--blue);
+  }
+
+  input[type="submit"] {
+    width: 50%;
+
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--btn-hover-text);
+    background-color: var(--btn);
+    cursor: pointer;
+    font-family: var(--secondary-header);
+    font-size: var(--xxs-size);
+    font-weight: var(--regular-weight);
+    text-transform: uppercase;
+    border: 1px solid var(--btn);
+    text-decoration: none;
+  }
+  input[type="submit"] :hover {
+    background-color: transparent;
+    color: var(--btn);
+  }
+  form {
+    display: flex;
+  }
+
+  .events_pictures {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+  }
+  .events_pictures .mobil_hide {
+    display: none;
+  }
+  .events_pictures img {
+    height: auto;
+    width: 300px;
+    margin-bottom: var(--gap-32);
+  }
+  .events_flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-32);
+    align-items: flex-start;
+    margin-top: var(--gap-32);
+  }
+
+  @media (min-width: 900px) {
+    .info {
+      max-width: 760px;
+      gap: var(--gap-96);
+    }
+
+    .events_flex {
+      flex-direction: row;
+      gap: var(--gap-96);
+      align-items: flex-start;
+      margin-top: none;
+    }
+    .desktop_flex {
       display: flex;
       flex-direction: column;
       gap: var(--gap-48);
-      margin-bottom: var(--gap-48);
     }
-    .btn_container,
-    .newsletter_container {
-      display: flex;
-      flex-direction: column;
-      gap: var(--gap-16);
-      align-items: start;
-    }
-
-    input[type="email"] {
-      width: 100%;
-      padding: var(--gap-16);
-
-      display: inline-block;
-      border: 1px solid var(--blue);
-    }
-
-    input[type="submit"] {
-      width: 50%;
-
-      display: inline-block;
-      background-color: var(--blue);
-      color: var(--btn-hover-text);
-      background-color: var(--btn);
-      cursor: pointer;
-      font-family: var(--secondary-header);
-      font-size: var(--xxs-size);
-      font-weight: var(--regular-weight);
-      text-transform: uppercase;
-      border: 1px solid var(--btn);
-      text-decoration: none;
-    }
-    input[type="submit"] :hover {
-      background-color: transparent;
-      color: var(--btn);
-    }
-    form {
-      display: flex;
-    }
-
     .events_pictures {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      align-items: center;
-    }
-    .events_pictures .mobil_hide {
-      display: none;
-    }
-    .events_pictures img {
-      height: auto;
-      width: 300px;
-      margin-bottom: var(--gap-32);
-    }
-    .events_flex {
-      display: flex;
-      flex-direction: column;
-      gap: var(--gap-32);
+      flex-direction: row;
+      justify-content: flex-start;
       align-items: flex-start;
-      margin-top: var(--gap-32);
+      gap: var(--gap-16);
+      justify-content: center;
     }
 
-    @media (min-width: 900px) {
-      .info {
-        max-width: 760px;
-        gap: var(--gap-96);
-      }
-
-      .events_flex {
-        flex-direction: row;
-        gap: var(--gap-96);
-        align-items: flex-start;
-        margin-top: none;
-      }
-      .desktop_flex {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-48);
-      }
-      .events_pictures {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: var(--gap-16);
-      }
-
-      .events_pictures .mobil_hide {
-        display: block;
-      }
+    .events_pictures .mobil_hide {
+      display: block;
     }
-  </style>
-</section>
+  }
+</style>
