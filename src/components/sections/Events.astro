@@ -18,6 +18,10 @@ import Btn from "../assets/Btn.astro";
           <input type="email" id="email" name="email" placeholder="Write your email..." required />
 
           <input type="submit" value="Send" />
+          <label class="check">
+            <input type="checkbox" name="consent" required />
+            I agree to receive newsletters about upcoming events.</label
+          >
         </form>
       </div>
       <div class="btn_container">
@@ -97,9 +101,15 @@ import Btn from "../assets/Btn.astro";
     .events_flex {
       display: flex;
       flex-direction: column;
-      gap: var(--gap-32);
       align-items: flex-start;
       margin-top: var(--gap-32);
+    }
+    .check {
+      padding-left: var(--gap-16);
+      display: flex;
+      align-items: center;
+      gap: var(--gap-8);
+      font-size: var(--xxs-size);
     }
 
     @media (min-width: 900px) {
