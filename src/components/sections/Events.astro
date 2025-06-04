@@ -14,7 +14,7 @@ import Btn from "../assets/Btn.astro";
       <div class="newsletter_container">
         <p class="bold text_blue">Sign up for our lovely events!</p>
 
-        <form name="newsletter" method="post" netlify netlify-honeypot="bot-field">
+        <form action="index.astro" name="newsletter" method="post" netlify netlify-honeypot="bot-field">
           <input type="email" id="email" name="email" placeholder="Write your email..." required />
 
           <input type="submit" value="Send" />
