@@ -60,7 +60,9 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video class="video_player" loading="lazy" src={data.video}>Your browser does not support the video tag.</video>
+      <video class="video_player" loading="lazy" src={data.video}
+        >Your browser does not support the video tag.</video
+      >
       <button class="play_button">▶</button>
     </div>
   </div>
@@ -120,6 +122,7 @@ const { data } = Astro.props;
     max-width: 400px;
     height: auto;
   }
+
   @media (min-width: 900px) {
     .flex_container {
       display: flex;
